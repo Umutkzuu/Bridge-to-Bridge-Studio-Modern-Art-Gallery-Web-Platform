@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Bridge to Bridge Studio - Admin Panel" />
+    <title>Yönetim Paneli - Bridge to Bridge Studio</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        .card-body { color: #333 !important; }
+        .card-body p, .card-body li, .card-body span { color: #555 !important; }
+        .card-body h5, .card-body h6 { color: #333 !important; }
+        .card-body strong { color: #333 !important; }
+        .card-text { color: #555 !important; }
+        footer p, footer a { color: #333 !important; }
+        .footer-link a { color: #007bff !important; }
+        .footer-link a:hover { color: #0056b3 !important; text-decoration: underline; }
+        .form-group label { color: #333 !important; font-weight: 500; }
+        table { color: #333 !important; }
+        table th { color: #333 !important; font-weight: 600; }
+        table td { color: #555 !important; }
+        .list-group-item { color: #333 !important; }
+    </style>
+</head>
+
+<body>
+    <div class="nav-main">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand font-weight-bold" href="index.html">Bridge to Bridge</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Anasayfa</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Galeri
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="project.html">Yağlı Boya</a>
+                                <a class="dropdown-item" href="project.html">Heykel</a>
+                                <a class="dropdown-item" href="project.html">Dijital Sanat</a>
+                                <a class="dropdown-item" href="project.html">Atölye</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Kurumsal
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <a class="dropdown-item" href="about.html">Hakkımızda</a>
+                                <a class="dropdown-item" href="misyon-vizyon.html">Misyon-Vizyon</a>
+                                <a class="dropdown-item" href="birimlerimiz.html">Birimlerimiz</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Ürünlerimiz
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                                <a class="dropdown-item" href="urunlerimiz.html">Tüm Ürünler</a>
+                                <a class="dropdown-item" href="project.html">Yağlı Boya</a>
+                                <a class="dropdown-item" href="project.html">Heykel</a>
+                                <a class="dropdown-item" href="project.html">Dijital Sanat</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="sayilarla-bridge.html">Sayılarla Bridge</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">İletişim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin.html">Admin Paneli</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--end:Nav -->
+        </div>
+    </div>
+    <!--end:Navigation -->
+    <main role="main">
+        <section class="pt-4">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-md-3">
+                        <div class="list-group">
+                            <a href="#dashboard" class="list-group-item list-group-item-action active" data-toggle="tab">Dashboard</a>
+                            <a href="#duyuru-ekle" class="list-group-item list-group-item-action" data-toggle="tab">Duyuru Ekle</a>
+                            <a href="#eser-ekle" class="list-group-item list-group-item-action" data-toggle="tab">Eser İşlemleri</a>
+                            <a href="#kullanicilar" class="list-group-item list-group-item-action" data-toggle="tab">Kullanıcılar</a>
+                            <a href="#ayarlar" class="list-group-item list-group-item-action" data-toggle="tab">Ayarlar</a>
+                        </div>
+                    </div>
+                    <!-- Main Content -->
+                    <div class="col-md-9">
+                        <h1 class="mb-4">Yönetim Paneli</h1>
+                        
+                        <!-- Tab Content -->
+                        <div class="tab-content">
+                            <!-- Dashboard Tab -->
+                            <div class="tab-pane fade show active" id="dashboard">
+                                <!-- Chart Section -->
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Ziyaretçi İstatistikleri</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="visitorsChart" height="100"></canvas>
+                                    </div>
+                                </div>
+
+                                <!-- Table Section -->
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Son Eklenen Eserler</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Eser Adı</th>
+                                                        <th>Kategori</th>
+                                                        <th>Tarih</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Modern Kompozisyon</td>
+                                                        <td>Yağlı Boya</td>
+                                                        <td>15.01.2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Heykel Serisi #3</td>
+                                                        <td>Heykel</td>
+                                                        <td>12.01.2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Dijital Sanat Koleksiyonu</td>
+                                                        <td>Dijital Sanat</td>
+                                                        <td>10.01.2025</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Duyuru Ekle Tab -->
+                            <div class="tab-pane fade" id="duyuru-ekle">
+                                <div class="card">
+                                    <div class="card-header bg-primary text-white">
+                                        <h5 class="mb-0">Yeni Duyuru Ekle</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="duyuruBaslik">Başlık *</label>
+                                                <input type="text" class="form-control" id="duyuruBaslik" placeholder="Duyuru başlığını giriniz" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="duyuruIcerik">İçerik *</label>
+                                                <textarea class="form-control" id="duyuruIcerik" rows="5" placeholder="Duyuru içeriğini yazınız" required></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="duyuruTarih">Tarih *</label>
+                                                <input type="date" class="form-control" id="duyuruTarih" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="duyuruResim">Resim Yükle</label>
+                                                <input type="file" class="form-control-file" id="duyuruResim" accept="image/*">
+                                                <small class="form-text text-muted">JPG, PNG veya GIF formatında resim yükleyebilirsiniz.</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="duyuruPDF">PDF Dosyası Yükle</label>
+                                                <input type="file" class="form-control-file" id="duyuruPDF" accept=".pdf">
+                                                <small class="form-text text-muted">PDF formatında dosya yükleyebilirsiniz.</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="duyuruWord">Word Belgesi Yükle</label>
+                                                <input type="file" class="form-control-file" id="duyuruWord" accept=".doc,.docx">
+                                                <small class="form-text text-muted">DOC veya DOCX formatında dosya yükleyebilirsiniz.</small>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Duyuruyu Kaydet</button>
+                                            <button type="reset" class="btn btn-secondary">Temizle</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Eser Ekle Tab -->
+                            <div class="tab-pane fade" id="eser-ekle">
+                                <div class="card">
+                                    <div class="card-header bg-success text-white">
+                                        <h5 class="mb-0">Yeni Eser Ekle</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="eserAdi">Eser Adı *</label>
+                                                <input type="text" class="form-control" id="eserAdi" placeholder="Eser adını giriniz" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="eserKategori">Kategori *</label>
+                                                <select class="form-control" id="eserKategori" required>
+                                                    <option value="">Kategori Seçiniz</option>
+                                                    <option value="yagli-boya">Yağlı Boya</option>
+                                                    <option value="heykel">Heykel</option>
+                                                    <option value="dijital-sanat">Dijital Sanat</option>
+                                                    <option value="atolye">Atölye</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="eserAciklama">Açıklama *</label>
+                                                <textarea class="form-control" id="eserAciklama" rows="4" placeholder="Eser açıklamasını yazınız" required></textarea>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="eserBoyut">Boyut</label>
+                                                        <input type="text" class="form-control" id="eserBoyut" placeholder="Örn: 80x100 cm">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="eserTeknik">Teknik</label>
+                                                        <input type="text" class="form-control" id="eserTeknik" placeholder="Örn: Tuval üzerine yağlı boya">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="eserSanatci">Sanatçı</label>
+                                                        <input type="text" class="form-control" id="eserSanatci" placeholder="Sanatçı adı">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="eserFiyat">Fiyat (TL) *</label>
+                                                        <input type="number" class="form-control" id="eserFiyat" placeholder="0" min="0" step="0.01" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="eserResim">Eser Görselleri *</label>
+                                                <input type="file" class="form-control-file" id="eserResim" accept="image/*" multiple required>
+                                                <small class="form-text text-muted">Birden fazla resim seçebilirsiniz. JPG, PNG veya GIF formatında.</small>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">Eseri Kaydet</button>
+                                            <button type="reset" class="btn btn-secondary">Temizle</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Kullanıcılar Tab -->
+                            <div class="tab-pane fade" id="kullanicilar">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Kullanıcı Yönetimi</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Kullanıcı yönetimi özellikleri yakında eklenecektir.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ayarlar Tab -->
+                            <div class="tab-pane fade" id="ayarlar">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">Sistem Ayarları</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Sistem ayarları yakında eklenecektir.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-auto mt-4">
+                    <p class="mb-4">Tasarım: Bridge to Bridge - Bridge to Bridge Studio &copy; 2025</p>
+                </div>
+                <div class="col-lg-3 mt-4 ml-auto">
+                    <p>Kocaeli Üniversitesi, Teknoloji Fakültesi
+                        <br> İzmit/Kocaeli
+                        <br> Telefon: +90 (262) XXX XX XX
+                    </p>
+                    <a href="mailto:info@bridgetobridge.com"><span style="text-decoration: underline;">info@bridgetobridge.com</span></a>
+                </div>
+                <div class="col-lg-3 mt-4 ml-auto">
+                    <ul class="list-unstyled footer-link">
+                        <li><a href="#">instagram</a></li>
+                        <li><a href="#">facebook</a></li>
+                        <li><a href="#">twitter</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-auto ml-lg-auto mt-4">
+                    <ul class="list-unstyled footer-link">
+                        <li><a href="#">instagram</a></li>
+                        <li><a href="#">facebook</a></li>
+                        <li><a href="#">twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </footer>
+    <script src="assets/js/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Initialize Chart
+        const ctx = document.getElementById('visitorsChart').getContext('2d');
+        const visitorsChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'],
+                datasets: [{
+                    label: 'Aylık Ziyaretçi Sayısı',
+                    data: [120, 190, 300, 250, 280, 320],
+                    borderColor: 'rgb(75, 192, 192)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
+
