@@ -296,6 +296,13 @@ function minifyCss() {
     .pipe(dest('dist/assets/css'));
 }
 
+// TASK GROUPS FOR BUILD PIPELINE
+const styles = series(compileSCSS, minifyCss);
+const scripts = series(concatScripts, minifyScripts);
+const images = copyImages;
+const html = series(compileHTML, renameSources, prettyHTML);
+const clean = cleanDist;
+
 // RUN ALL LINTERS
 exports.linters = series(htmlLint, scssLint, jsLint);
 
@@ -310,15 +317,12 @@ exports.prod = series(cleanDist, compileSCSS, copyFont, copyImages, compileHTML,
 
 // BUILD (for Netlify and CI/CD)
 // Production-ready build without browserSync and docs generation
+// Follows structure: clean -> styles -> scripts -> images -> html
 exports.build = series(
-  cleanDist,
-  compileSCSS,
+  clean,
   copyFont,
-  copyImages,
-  compileHTML,
-  concatScripts,
-  minifyScripts,
-  minifyCss,
-  renameSources,
-  prettyHTML
+  styles,
+  scripts,
+  images,
+  html
 );
